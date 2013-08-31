@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+    <link rel='stylesheet' type='text/css' href='style.css'>
+
+    <script type='text/javascript' src='jquery.min.js'></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
+
+    <script type='text/javascript' src='client.js'></script>
+  </head>
+
+  <body>
+    <header>
+    <h1>Bitcoineer</h1>
+    <p id='status'>Loading...</p>
+    </header>
+
+    <section id='overview'>
+    <h2>Status</h2>
+    <div id='info'>
+      <div id='trend'>Loading...</div>
+      <div id='profit'><span id='profit-val' class='good'>---%</span> (24H)</div>
+      <div id='worth'>---$</div>
+      <div id='worth-conv'><div id='worth-btc'>---B⃦</div><div id='worth-usd'>---$</div></div>
+    </div>
+    </section>
+
+    <section id='charts'>
+    <div id='scale-select'>
+      <a id='market-scale-3h' class='active' value='3h'>3h</a>
+      <a id='market-scale-1d' value='1d'>1d</a>
+      <a id='market-scale-3d' value='3d'>3d</a>
+      <a id='market-scale-10d' value='10d'>10d</a>
+    </div>
+
+    <h2>Charts</h2>
+
+    <div id='value-chart' class='chart'></div>
+    <div id='market-chart' class='chart'></div>
+  </div>
+  </section>
+
+  <section id='orders'>
+  <h2>Orders</h2>
+  </section>
+
+  <section id='actions'>
+  <input id='password' placeholder='Password'></input>
+  <h2>Actions</h2>
+
+  <button class='danger command trading-command' id='sell-and-stop' name='sell-stop'>Liquidize and exit</button>
+  <button class='danger command trading-command' id='buy-and-stop' name='buy-stop'>Buy and exit</button>
+  <button class='danger command trading-command' id='stop' name='stop'>Exit</button>
+
+  <button class='green command idle-command' id='start' name='start'>Start Trading</button>
+  <button class='green command idle-command' id='buy' name='buy'>Buy</button>
+  <button class='green command idle-command' id='sell' name='sell'>Sell</button>
+  </section>
+
+  <footer>
+  <p id='wisewords'>Authorized Access Only</p>
+  </footer>
+</body>
+</html>
